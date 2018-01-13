@@ -147,6 +147,9 @@ elif env['build'] == 'fast':
     env.AppendUnique(LINKFLAGS=fast_linkflags)
     env.AppendUnique(SHLINKFLAGS=fast_shlinkflags)
 
+env.AppendUnique(CPPDEFINES='REAL=double')
+env.AppendUnique(CPPDEFINES='__ZDENEK__')
+
 if env['profile']:
     env.AppendUnique(CCFLAGS='-pg')
     env.AppendUnique(LINKFLAGS='-pg')
