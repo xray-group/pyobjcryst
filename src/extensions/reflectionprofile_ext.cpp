@@ -46,7 +46,7 @@ class ReflectionProfileWrap :
 
         CrystVector_REAL GetProfile(
                 const CrystVector_REAL& x, const REAL xcenter,
-                const REAL h, const REAL k, const REAL l) const
+                const REAL h, const REAL k, const REAL l) // method is non-const in MStruct
         {
             bp::override f = this->get_override("GetProfile");
             return f(x, xcenter, h, k, l);
