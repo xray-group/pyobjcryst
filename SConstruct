@@ -149,6 +149,7 @@ elif env['build'] == 'fast':
 
 env.AppendUnique(CPPDEFINES='REAL=double')
 env.AppendUnique(CPPDEFINES='__ZDENEK__')
+env.AppendUnique(CPPFLAGS='-std=gnu++98')
 
 if env['profile']:
     env.AppendUnique(CCFLAGS='-pg')
